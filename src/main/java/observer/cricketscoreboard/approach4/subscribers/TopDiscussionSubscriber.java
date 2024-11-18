@@ -21,5 +21,6 @@ public class TopDiscussionSubscriber implements Subscriber {
         // logic to persist detail in DB
         // algorithm to compute projected score
         // logic to update the board display
+        System.out.println("TopDiscussionSubscriber: Runs: " + runs + ", Overs: " + overs + ", wickets: " + wickets);
     }
 }

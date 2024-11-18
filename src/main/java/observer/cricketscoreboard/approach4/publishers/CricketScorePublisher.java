@@ -40,5 +40,6 @@ public class CricketScorePublisher implements Publisher {
     @Override
     public void unsubscribe(Subscriber subscriber) {
         this.subscribers.remove(subscriber);
+        System.out.println("\n" + "Subscriber: " + subscriber.getClass().getSimpleName() + " has unsubscribed itself from Publisher: " + this.getClass().getSimpleName() + "\n");
     }
 }
