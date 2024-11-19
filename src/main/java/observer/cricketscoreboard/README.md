@@ -44,3 +44,17 @@ Cons:
 **Approach 4**: **Pub-Sub Model**<br/>
 Design:
 ![approach4-A.png](approach4%2Fapproach4-A.png)
+* Added PubSubTester
+
+Cons:
+* RunRateSubscriber dont need _wickets_ for it's calculation, still it needs to 
+pass it. This is due to **contract** of _Subscriber_ interface **forces** us to pass it into the function.
+**BAD DESIGN!**
+
+**Approach 5**: **PUSH Method, but Subscriber PULLS Data** <br/>
+* Let Subscriber interface's update method don't need any parameter.
+* Instead Subscriber implementation will **pull** data it _needs_ from Publisher's **Getter** methods
+
+Summary:
+1. **PUSH NOTIFICATION**: Data is not pushed, it's pulled by Subscriber (i.e Publisher notifies the Subscriber of updated data)
+2. **PULLED DATA**: Subscriber will pull it's needful data from Publisher
