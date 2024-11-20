@@ -68,3 +68,6 @@ Problem:
 **Approach 6**: **Multiple Publishers** <br/>
 ![approach6-A.png](approach6%2Fapproach6-A.png)
 
+Problem:
+* How to implement FootballScorePublisher?
+
