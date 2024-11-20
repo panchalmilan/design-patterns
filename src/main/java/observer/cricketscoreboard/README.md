@@ -58,3 +58,13 @@ pass it. This is due to **contract** of _Subscriber_ interface **forces** us to 
 Summary:
 1. **PUSH NOTIFICATION**: Data is not pushed, it's pulled by Subscriber (i.e Publisher notifies the Subscriber of updated data)
 2. **PULLED DATA**: Subscriber will pull it's needful data from Publisher
+![approach5-A.png](approach5%2Fapproach5-A.png)
+
+
+Problem: 
+* If there are multiple publisher (e.g. ESPN, Sony), then Subscriber will have to publish to them all to get data from all of them 
+* And then modify the algo to get latest updated data (as there can be lag b/w publisher)
+
+**Approach 6**: **Multiple Publishers** <br/>
+![approach6-A.png](approach6%2Fapproach6-A.png)
+
