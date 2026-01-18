@@ -1,9 +1,18 @@
 package observer.cricketscoreboard.approach3.subscribers;
 
+import observer.cricketscoreboard.approach3.CricketScorePublisher;
+
 public class TopDiscussionSubscriber implements Subscriber {
     private int runs;
     private float overs;
     private int wickets;
+
+    // this is needed as Subscriber will need to subscribe to Publisher
+    private final CricketScorePublisher cricketScorePublisher;
+
+    public TopDiscussionSubscriber(CricketScorePublisher cricketScorePublisher) {
+        this.cricketScorePublisher = cricketScorePublisher;
+    }
 
     @Override
     public void update(int runs, float overs, int wickets) {
